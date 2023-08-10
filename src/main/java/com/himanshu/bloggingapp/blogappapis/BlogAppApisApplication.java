@@ -3,6 +3,8 @@ package com.himanshu.bloggingapp.blogappapis;
 import com.himanshu.bloggingapp.blogappapis.config.AppConstants;
 import com.himanshu.bloggingapp.blogappapis.entities.Role;
 import com.himanshu.bloggingapp.blogappapis.repositories.RoleRepository;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -15,6 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import java.util.List;
 
 @SpringBootApplication
+@OpenAPIDefinition(info = @Info(title = "Blogging Application APIs", version = "2.0", description = "Blogging App Information"))
 public class BlogAppApisApplication implements CommandLineRunner
 {
 
